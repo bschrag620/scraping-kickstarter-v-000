@@ -14,7 +14,6 @@ def create_project_hash
         location: project.css("ul.project-meta .location-name").text,
         percent_funded: project.css(".project-stats .first.funded strong").text.gsub("%", "").to_i}
   end
-  puts projects.count
   projects
 end
 
