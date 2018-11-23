@@ -13,7 +13,7 @@ def create_project_hash
         location: project.css("ul.project-meta .location-name").text,
         percent_funded: project.css(".project-stats .first.funded strong").text.gsub("%", "").to_i}
     if projects[title.to_sym][:image].nil?
-      puts title
+      puts "missing img: #{title}"
     end
   end
   projects
