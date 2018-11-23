@@ -17,6 +17,7 @@ def create_project_hash
       puts "missing info title: #{title}"
     end
   end
+  puts projects.count
   projects
 end
 
