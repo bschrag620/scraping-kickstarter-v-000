@@ -14,6 +14,7 @@ def create_project_hash
         percent_funded: project.css(".project-stats .first.funded strong").text.gsub("%", "").to_i}
     if projects[title.to_sym][:image].nil?
       puts projects[title.to_sym]
+    end
   end
   projects
 end
