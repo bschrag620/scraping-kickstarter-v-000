@@ -12,9 +12,7 @@ def create_project_hash
         description: project.css("p.bbcard_blurb").text,
         location: project.css("ul.project-meta .location-name").text,
         percent_funded: project.css(".project-stats .first.funded strong").text.gsub("%", "").to_i}
-  end
-  projects.each do |project|
-    puts project[:image]
+    puts projects[title.to_sym][:image]
   end
   projects
 end
