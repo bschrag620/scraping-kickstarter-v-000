@@ -13,9 +13,6 @@ def create_project_hash
         description: project.css("p.bbcard_blurb").text,
         location: project.css("ul.project-meta .location-name").text,
         percent_funded: project.css(".project-stats .first.funded strong").text.gsub("%", "").to_i}
-    if !regex.match(projects[title.to_sym][:image])
-      puts "missing info title: #{title}"
-    end
   end
   puts projects.count
   projects
